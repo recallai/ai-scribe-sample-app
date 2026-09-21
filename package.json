@@ -1,0 +1,36 @@
+{
+  "name": "telehealth-scribe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample Express backend for a telehealth scribe built on Recall.ai meeting bots.",
+  "main": "src/index.ts",
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "dev:client": "npm run dev --workspace client",
+    "build": "npm run build --workspace client",
+    "start": "tsx src/index.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.50",
+    "@ai-sdk/openai": "^4.0.50",
+    "ai": "^7.0.95",
+    "axios": "^1.20.0",
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
